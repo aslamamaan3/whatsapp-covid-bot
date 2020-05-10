@@ -19,7 +19,7 @@ def covidBot():
 	message = response.message()
 	responded = False
 
-	if receivedMsg.find("covid country ", 0, 13) != -1
+	if receivedMsg.find('covid country ', 0, 13) != -1
 
 		country = receivedMsg[14:]
 		country = country.strip()
