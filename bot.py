@@ -30,7 +30,7 @@ def covidBot():
 		msgText = 'Country: ' +data["country"] + '\nTotal Cases: ' +data["cases"] + '\nCases Today: ' +data["todayCases"] + '\n\nTotal Deaths' +data["deaths"]+ '\nDeaths Today' +data["todayDeaths"]+ '\nRecovered:' + data["recovered"] 		
 		message.body(msgText)
 	else
-		message.body('Service unavailable at this time')
+		message.body('Service unavailable at this time. Please Try Later')
 
 	responded = True
 
