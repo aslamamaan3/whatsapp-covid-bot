@@ -33,11 +33,10 @@ def covidBot():
 			msgText = f'Country: *{data["country"]}* \nTotal Cases: *{data["cases"]}* \nCases Today: *{data["todayCases"]}* \n\nTotal Deaths *{data["deaths"]}* \nDeaths Today *{data["todayDeaths"]}* \n\nRecovered: *{data["recovered"]}*'
 			message.body(msgText)
 		else:
-			msgText = r
-			message.body(msgText)
-			
+			message.body('Country not found.')
+
 	else:
-		message.body('Service unavailable at this time')
+		message.body('Service unavailable at this time.')
 
 	responded = True
 
