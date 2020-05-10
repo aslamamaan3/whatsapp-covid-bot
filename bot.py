@@ -27,7 +27,7 @@ def covidBot():
 	r = requests.get('https://coronavirus-19-api.herokuapp.com/countries/' + country)
 
 	if r.status_code == 200:
-		data = json.loads(r)
+		data = r.json
 		msgText = 'Country: ' +data["country"] + '\nTotal Cases: ' +data["cases"] + '\nCases Today: ' +data["todayCases"] + '\n\nTotal Deaths' +data["deaths"]+ '\nDeaths Today' +data["todayDeaths"]+ '\nRecovered:' + data["recovered"] 		
 		message.body(msgText)
 	else:
