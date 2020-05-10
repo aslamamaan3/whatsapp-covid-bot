@@ -28,11 +28,11 @@ def covidBot():
 
 	if r.status_code == 200:
 
-		if r.json():
+		try:
 			data = r.json()
 			msgText = f'Country: *{data["country"]}* \nTotal Cases: *{data["cases"]}* \nCases Today: *{data["todayCases"]}* \n\nTotal Deaths *{data["deaths"]}* \nDeaths Today *{data["todayDeaths"]}* \n\nRecovered: *{data["recovered"]}*'
 			message.body(msgText)
-		else:
+		except ValueError as e:
 			message.body('Country not found.')
 
 	else:
