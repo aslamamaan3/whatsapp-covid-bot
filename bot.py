@@ -35,7 +35,7 @@ def covidBot():
 		responded = True
 
 
-	if responded == False
+	if responded == False:
 		return
 
 	return str(response)
