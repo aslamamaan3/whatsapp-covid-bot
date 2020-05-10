@@ -23,7 +23,7 @@ def covidBot():
 	country = receivedMsg
 	#country = country.strip()
 
-	r = request.get('https://coronavirus-19-api.herokuapp.com/countries/' + country)
+	r = requests.get('https://coronavirus-19-api.herokuapp.com/countries/' + country)
 
 	if r.status_code == 200:
 		data = json.loads(r)
