@@ -1,6 +1,7 @@
 from flask import Flask
-from flask import requests
+from flask import request
 from twilio.twiml.messaging_response import MessagingResponse
+import requests
 import json
 
 app = Flask(__name__)
