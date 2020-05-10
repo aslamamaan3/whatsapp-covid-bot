@@ -27,9 +27,15 @@ def covidBot():
 	r = requests.get('https://coronavirus-19-api.herokuapp.com/countries/' + country)
 
 	if r.status_code == 200:
-		data = r.json()
-		#msgText = f'Country: *{data["country"]}* \nTotal Cases: *{data["cases"]}* \nCases Today: *{data["todayCases"]}* \n\nTotal Deaths *{data["deaths"]}* \nDeaths Today *{data["todayDeaths"]}* \n\nRecovered: *{data["recovered"]}*'
-		message.body(data)
+
+		if r.json():
+			data = r.json()
+			msgText = f'Country: *{data["country"]}* \nTotal Cases: *{data["cases"]}* \nCases Today: *{data["todayCases"]}* \n\nTotal Deaths *{data["deaths"]}* \nDeaths Today *{data["todayDeaths"]}* \n\nRecovered: *{data["recovered"]}*'
+			message.body(msgText)
+		else:
+			msgText = r
+			message.body(msgText)
+			
 	else:
 		message.body('Service unavailable at this time')
 
