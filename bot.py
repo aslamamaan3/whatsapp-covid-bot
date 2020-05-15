@@ -34,7 +34,7 @@ def covidBot():
 
 			try:
 				data = r.json()
-				msgText = f'Country: *{data["country"]}* \nTotal Cases: *{data["cases"]}* \nCases Today: *{data["todayCases"]}* \n\nTotal Deaths *{data["deaths"]}* \nDeaths Today *{data["todayDeaths"]}* \n\nRecovered: *{data["recovered"]}*'
+				msgText = f'Country: *{data["country"]}* \nTotal Cases: *{data["cases"]}* \nCases Today: *{data["todayCases"]}* \n\nTotal Deaths: *{data["deaths"]}* \nDeaths Today: *{data["todayDeaths"]}* \n\nRecovered: *{data["recovered"]}*'
 				message.body(msgText)
 			except ValueError as e:
 				message.body('Country not found.')
