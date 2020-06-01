@@ -1,4 +1,4 @@
-# whatsapp-covid-bot
+# Chatbot for Covid Stats
 A whatsapp bot which sends covid-19 statistics with a simple command.
 
 # How to talk to it?
